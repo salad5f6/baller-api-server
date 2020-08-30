@@ -1,0 +1,14 @@
+{
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "postgres",
+    "database": "express_typescript_pg_database",
+    "synchronize": true,
+    "logging": true,
+    "entities": [
+        "src/entities/**/*.ts",
+        "dist/entities/**/*.js"
+    ]
+}
