@@ -1,6 +1,7 @@
 import { Photo } from "./Photo";
-import { Column, PrimaryGeneratedColumn, OneToMany } from "typeorm";
+import { Column, PrimaryGeneratedColumn, OneToMany, Entity } from "typeorm";
 
+@Entity()
 export class Author {
     @PrimaryGeneratedColumn()
     id: number;
@@ -8,6 +9,6 @@ export class Author {
     @Column()
     name: string;
 
-    @OneToMany(_type => Photo, photo => photo.author) // note: we will create author property in the Photo class below
+    @OneToMany(_type => Photo, photo => photo.author)
     photos: Photo[];
 }
