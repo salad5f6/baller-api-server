@@ -1,1 +1,3 @@
-# devOps_typeorm_pg_typescript_stack
+# baller APIs server
+
+provides services for baller mobile apps 
