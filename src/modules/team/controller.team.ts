@@ -3,8 +3,9 @@ import { Response } from "express";
 import { getTeamsService, createTeamService } from "./service.team"
 
 const getTeams = async (_req, res: Response) => {
-    const teams = await getTeamsService();
-    return res.end(teams)
+    res.writeHead(200, { 'Content-Type': 'application/json' })
+    res.write(JSON.stringify(await getTeamsService()));
+    res.end();
 }
 
 const createTeam = async (req: any, res: Response) => {
