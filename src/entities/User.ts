@@ -20,10 +20,10 @@ export class User {
     @Column({ nullable: true, default: null })
     avatar: BinaryType;
 
-    @Column('text', { unique: true })
+    @Column('text', { unique: true, nullable: false })
     email: string;
 
-    @Column()
+    @Column({ nullable: false })
     password: string;
 
     @ManyToMany(_type => Team, team => team.members)

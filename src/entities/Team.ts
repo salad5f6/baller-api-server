@@ -15,8 +15,8 @@ export class Team {
     @Column({ nullable: true, default: null })
     avatar: BinaryType;
 
-    @Column({ nullable: true, default: null })
-    images: BinaryType;
+    @Column('uuid', { default: {}, array: true })
+    images: BinaryType[];
 
     @Column("text")
     description: string;

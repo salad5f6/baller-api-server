@@ -4,7 +4,7 @@ import { getProfile, updateProfile, updatePassword } from "./controller.profile"
 const ProfileRouter = express.Router()
 
 ProfileRouter.use(function timeLog(_req, _res, next) {
-    console.log('Profile: ', Date.now())
+    console.log('somehoan Profile: ', Date.now())
     next()
 })
 
